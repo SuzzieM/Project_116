@@ -26,8 +26,8 @@ function gotPoses(results)
     if(results.length > 0)
     {
         console.log(results);
-        rightEyeX = results[0].pose.rightEye.x + 16;
-        rightEyeY = results[0].pose.rightEye.y - 2;
+        rightEyeX = results[0].pose.rightEye.x;
+        rightEyeY = results[0].pose.rightEye.y;
         console.log("rightEye x = " + rightEyeX);
         console.log("rightEye y = " + rightEyeY);
     }
@@ -35,7 +35,7 @@ function gotPoses(results)
 
 function draw() {
     image(video, 25, 25, 300, 300);
-    image(specs, rightEyeX, rightEyeY, 40, 40);
+    image(specs, rightEyeX, rightEyeY, 80, 70);
 }
 
 function take_snapshot() {
